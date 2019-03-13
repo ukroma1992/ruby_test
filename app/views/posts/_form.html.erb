@@ -1,0 +1,6 @@
+<%= simple_form_for(@post, html: { class: 'form-horizontal'}) do |f| %>
+  <%= f.collection_select :category_id, Category.all, :id, :name, {prompt: "Choose a category"}, input_html: { class: "dropdown-toggle" } %>
+  <%= f.input :url, label: "Add link", input_html: { class: "form-control" } %>
+  <br>
+  <%= f.button :submit , class: "btn btn-default" %>
+<% end %>
