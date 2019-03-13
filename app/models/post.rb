@@ -11,8 +11,8 @@ class Post < ApplicationRecord
     self.title = "Title #{self.id}" if self.title.blank?
   end
 
-  def self.destroy_post
-    posts = Post.where.not(created_at: 5.minutes.ago..Time.now)
+  def self.destroy_url
+    posts = Post.where.not(created_at: 15.minutes.ago..Time.now)
 
     posts.each do |post|
       post.update_column(:url, nil)

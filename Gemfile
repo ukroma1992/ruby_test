@@ -16,7 +16,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'simple_form'
-
+gem 'whenever', require: false
 
 
 group :development, :test do
